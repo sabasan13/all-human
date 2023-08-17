@@ -1,0 +1,20 @@
+{
+    "serve": "public",
+    "servePrefix": "/",
+    "port": 5001,
+    "bind": "0.0.0.0",
+    "watchexps": [
+        "public/**/**.js # # reload",
+        "public/**/*.css # # reloadcss",
+        "public/**/*.html # # reload"
+    ],
+    "interval": 500,
+    "delay": 300,
+    "proxy": "http://localhost:9999",
+    "proxypaths": ["/api"],
+    "noReload": false,
+    "quiet": false,
+    "open": true,
+    "http2": false,
+    "historyindex": "/list-dir.html"
+}

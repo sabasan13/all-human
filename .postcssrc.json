@@ -1,0 +1,20 @@
+{
+    "plugins": {
+        "postcss-import": {},
+        "postcss-selector-not": {},
+        "postcss-short-spacing": {},
+        "postcss-mixins": {},
+        "postcss-simple-vars": {},
+        "postcss-nested": {},
+        "postcss-custom-media": {},
+        "postcss-media-minmax": {},
+        "postcss-calc": {},
+        "autoprefixer": {},
+        "css-mqpacker": {},
+        "postcss-browser-reporter": {
+            "styles": {
+                "display": "none"
+            }
+        }
+    }
+}

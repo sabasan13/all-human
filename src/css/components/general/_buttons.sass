@@ -1,0 +1,32 @@
+@import "vars"
+
+.border__btn
+	display: inline-block
+	text-align: center
+	padding: 7px 47px 7px 19px
+	border: 1px solid rgba(255, 255, 255, 0.25)
+	border-radius: 12px
+	background: none
+	font-size: 16px
+	line-height: 26px
+	font-weight: 500
+	color: #fff
+	white-space: nowrap
+	position: relative
+	&-download
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 12px
+			transform: translate(0,-50%)
+			width: 24px
+			height: 25px
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 3.5L12 15.5M12 15.5L7.5 11M12 15.5L16.5 11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3 15.5V18C3 19.1046 3.89543 20 5 20H19C20.1046 20 21 19.1046 21 18V15.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+	&:hover
+		border-color: #FBFBFB
+	&:disabled
+		cursor: not-allowed
