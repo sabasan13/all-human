@@ -1,40 +1,58 @@
 .page {
     &--gray {
-        background: #CDCDCD;
+        background: $grayLight;
     }
+    .container {
+        @media #{$desktop}  {
+            display: grid;
+            grid-template-columns: 255px 1fr;
+            margin: 0 auto;
+        }
+    }
+    
 }
 
 .layout-main {
     position: relative;
     display: flex;
     flex-direction: column;
-
+    @media #{$desktop} {
+        padding: 0 30px 0 10px;
+    }
 }
-
 .feed-item {
     margin-bottom: 28px;
     padding-top: 10px;
-    border-top: 4px solid #205038;
+    border-top: 4px solid $greenDark;
+    @media #{$desktop} {
+        margin-bottom: 40px;
+        padding-top: 12px;
+    }
     &__date {
-        color: #205038;
-        font-size: 14px;
+        color: $greenDark;
+        font-size: $text-sm;
         font-style: normal;
         font-weight: 400;
-        line-height: 17px;
+        line-height: 1.2;
     }
     &__title  {
-        color:  #205038;
-        font-family: 'Halvar Breit';
-        font-size: 26px;
+        color:  $greenDark;
+        font-family: $HalvarBreit;
+        font-size: $text-lg;
         font-style: normal;
         font-weight: 700;
-        line-height: 23px; 
+        line-height: 0.8; 
         text-transform: uppercase;
         margin-bottom: 14px;
         display: block;
         margin-left: auto;
+        @media #{$desktop}  {
+            font-size: $text-xxl;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
         &--gold  {
-            color: #B58A3C;
+            color: $goldDark;
         }
     }
     &__img {
@@ -47,20 +65,29 @@
 .contact-item {
     margin-bottom: 10px;
     padding-top: 10px;
-    border-top: 4px solid #205038;
+    border-top: 4px solid $greenDark;
+    @media #{$desktop}  {
+        padding-top: 12px;
+        margin-bottom: 12px;
+    }
     &__title  {
-        color:  #205038;
-        font-family: 'Halvar Breit';
-        font-size: 26px;
+        color:  $greenDark;
+        font-family: $HalvarBreit;
+        font-size: $text-lg;
         font-style: normal;
         font-weight: 700;
-        line-height: 23px; 
+        line-height: 0.8; 
         text-transform: uppercase;
         margin-bottom: 14px;
         margin-left: auto;
         display: block;
         &--gold  {
-            color: #B58A3C;
+            color: $goldDark;
+        }
+        @media #{$desktop} {
+            font-size: $text-xxl;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
     }
     &-top {
@@ -68,76 +95,24 @@
         justify-content: space-between;
     }
     &__plus {
-        svg {
-            width: 28px;
+        @include svgIcon(100%);
+        width: 28px;
             height: 28px;
+        display: block;
+        > svg {
+            fill: $greenDark;
+        }
+
+        @media #{$desktop} {
+            width: 50px;
+            height: 50px;
         }
     }
     &__btn {
-        border-radius: 100px;
-        background: #205038;
-        height: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color:  #CDCDCD;
-        text-align: center;
-        font-family: 'Halvar Breit';
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 16px;
-        text-transform: uppercase;
+
         margin-top: 46px;
         margin-left: auto;
-    }
-
-}
-
-
-
-@media (min-width: 992px) {
-
-    .container {
-        display: grid;
-        grid-template-columns: 255px 1fr;
-
-        margin: 0 auto;
-    }
-    .layout-main {
-        padding: 0 30px 0 10px;
-    }
-    .feed-item {
-        margin-bottom: 40px;
-        padding-top: 12px;
-        &__title  {
-            font-size: 60px;
-            font-weight: 700;
-            line-height: 54px; 
-            margin-bottom: 20px;
-    
-        }
-    }
-    .contact-item {
-        padding-top: 12px;
-        margin-bottom: 12px;
-        &__title  {
-            font-size: 60px;
-            font-weight: 700;
-            line-height: 54px; 
-            margin-bottom: 20px;
-        }
-        &__plus {
-            svg {
-                width: 50px;
-                height: 50px;
-            }
-        }
-        &__btn {
-
-            height: 68px;
-            font-size: 40px;
-            line-height: 36px;
+        @media #{$desktop} {
             margin-top: 100px;
         }
     }

@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'Halvar Breit';
+	src: url('../fonts/HalvarBreit-Bd.woff2') format('woff2'),
+		url('../fonts/HalvarBreit-Bd.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Halvar Breit';
+	src: url('../fonts/HalvarBreit-Blk.woff2') format('woff2'),
+		url('../fonts/HalvarBreit-Blk.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Halvar Mittel';
+	src: url('../fonts/HalvarMittel-Rg.woff2') format('woff2'),
+		url('../fonts/HalvarMittel-Rg.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

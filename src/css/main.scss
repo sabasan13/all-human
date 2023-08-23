@@ -1,42 +1,9 @@
 @import "normalize";
+@import "fonts";
 @import "vars";
-
-@mixin font($fname, $fstyle, $fweight, $furl) {
-	@font-face {
-		font-family: $fname;
-		font-style: $fstyle;
-		font-weight: $fweight;
-		src: url($furl) format('woff2');
-	}
-}
-
-@font-face {
-	font-family: 'Halvar Breit';
-	src: url('../fonts/HalvarBreit-Bd.woff2') format('woff2'),
-		url('../fonts/HalvarBreit-Bd.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Halvar Breit';
-	src: url('../fonts/HalvarBreit-Blk.woff2') format('woff2'),
-		url('../fonts/HalvarBreit-Blk.woff') format('woff');
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Halvar Mittel';
-	src: url('../fonts/HalvarMittel-Rg.woff2') format('woff2'),
-		url('../fonts/HalvarMittel-Rg.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
+@import "typography";
+@import "media";
+@import "mixins/common";
 
 *:-moz-placeholder {
 	color: rgba(#fff, 0.6);
@@ -92,8 +59,8 @@ body {
 	scroll-behavior: smooth;
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
-	font-family: 'Halvar Mittel';
-	font-size: 16px;
+	font-family: $HalvarMittel;
+	font-size: $text-md;
 }
 
 .body__bg {
@@ -131,7 +98,7 @@ input,
 textarea,
 select,
 button {
-	font-family: $Roboto;
+
 	appearance: none;
 	box-shadow: none;
 }
@@ -144,36 +111,32 @@ button {
 
 .container {
 	padding: 0 14px;
-}
-
-@media (min-width: 576px) {
-	.container {
+	@media #{$phone-big} {
 		max-width: 540px;
 		margin: auto;
 		padding: 0;
 	}
-}
 
-@media (min-width: 768px) {
-	.container {
+	@media #{$tablet} {
 		max-width: 720px;
 	}
-}
 
-@media (min-width: 992px) {
-	.container {
+	@media #{$desktop} {
 		max-width: 960px;
 	}
-}
 
-@media (min-width: 1200px) {
-	.container {
+	@media #{$desktop-middle} {
 		max-width: 1440px;
 	}
 }
 
+
+
+
+
+
 @import "grid";
-@import "components/general/icons";
+@import "components/general/buttons";
 @import "components/header";
 @import "components/main";
 @import "components/main-menu";

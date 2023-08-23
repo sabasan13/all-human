@@ -1,0 +1,51 @@
+.btn {
+	border-radius: 100px;
+	background: $greenDark;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $grayLight;
+	text-align: center;
+	font-family: $HalvarBreit;
+	font-size: $text-md;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 0.8;
+	text-transform: uppercase;
+	transition: $transition;
+	@media #{$desktop} {
+		height: 68px;
+		font-size: $text-xl;
+	}
+	&:hover {
+		background: $goldDark;
+		color: $greenDark;
+	}
+	&--l {
+		height: 36px;
+		font-size: $text-md;
+	}
+	&--gold {
+		height: 36px;
+		font-size: $text-md;
+		background: $goldDark;
+		color: $greenDark;
+		&:hover {
+			background: $goldLight;
+		}
+	}
+	&--gray{
+		height: 36px;
+		font-size: $text-md;
+		background: $grayLight;
+		color: $greenDark;
+		&:hover {
+			background: $goldDark;
+		}
+	}
+	&--disable {
+		background: $grayMedium;
+		color: $grayDark;
+	}
+}

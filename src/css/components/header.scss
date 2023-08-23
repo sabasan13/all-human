@@ -1,5 +1,14 @@
-header {
+.header {
     padding: 14px 0 80px;
+    @media #{$desktop}  {
+        padding: 20px 0;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 }
 .logo {
     display: flex;
@@ -10,28 +19,14 @@ header {
         margin-bottom: 8px;
     }
     &__text {
-        color: #205038;
+        color: $greenDark;
         text-align: center;
-        font-family: 'Halvar Breit';
-        font-size: 14px;
+        font-family: $HalvarBreit;
+        font-size: $text-sm;
         font-style: normal;
         font-weight: 800;
         line-height: 90%;
         text-transform: uppercase;
         width: 120px;
     }
-}
-
-
-@media (min-width: 992px)  {
-	header {
-        padding: 20px 0;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-
 }

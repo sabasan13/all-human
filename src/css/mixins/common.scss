@@ -1,0 +1,19 @@
+@mixin svgIcon($height: 100%) {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    &:before {
+        display: block;
+        margin-top: $height;
+        content: '';
+    }
+
+    > svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}

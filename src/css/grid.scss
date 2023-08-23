@@ -1,12 +1,5 @@
+@import "media";
 
-$grid-gutter-width: 20px;
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
 
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
@@ -108,7 +101,7 @@ $grid-breakpoints: (
   max-width: 100%;
 }
 
-@media (min-width: 576px) {
+@media #{$phone-big} {
     .col-sm {
       -ms-flex-preferred-size: 0;
       flex-basis: 0;
@@ -183,7 +176,7 @@ $grid-breakpoints: (
       max-width: 100%;
     }
 }
-@media (min-width: 768px) {
+@media #{$tablet} {
     .col-md {
       -ms-flex-preferred-size: 0;
       flex-basis: 0;
@@ -258,7 +251,7 @@ $grid-breakpoints: (
       max-width: 100%;
     }
 }
-@media (min-width: 992px) {
+@media #{$desktop} {
     .col-lg {
       -ms-flex-preferred-size: 0;
       flex-basis: 0;
@@ -334,7 +327,7 @@ $grid-breakpoints: (
     }
 }
 
-@media (min-width: 1200px) {
+@media #{$desktop-middle}  {
     .col-xl {
       -ms-flex-preferred-size: 0;
       flex-basis: 0;
