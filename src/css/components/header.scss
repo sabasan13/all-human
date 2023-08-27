@@ -1,6 +1,7 @@
 .header {
     padding: 14px 0 80px;
-    @media #{$desktop}  {
+
+    @media #{$desktop} {
         padding: 20px 0;
         height: 100vh;
         position: sticky;
@@ -9,15 +10,32 @@
         flex-direction: column;
         justify-content: flex-end;
     }
+
+    &--green {
+        padding: 0;
+        padding-top: 14px;
+        @media #{$desktop} {
+            padding: 52px 0 80px;
+            justify-content: space-between;
+        }
+        .logo {
+            display: none;
+            @media #{$desktop} {
+                display: block;
+            }
+        }
+    }
 }
 .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &__img {
         width: 102px;
         margin-bottom: 8px;
     }
+
     &__text {
         color: $greenDark;
         text-align: center;
@@ -28,5 +46,28 @@
         line-height: 90%;
         text-transform: uppercase;
         width: 120px;
+    }
+}
+.back {
+    padding-top: 10px;
+    border-top: 4px solid $grayLight;
+    display: flex;
+    align-items: center;
+    color: $grayLight;
+    font-family: $HalvarBreit;
+    font-size: $text-sm;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 0.9;
+    text-transform: uppercase;
+    &__icon {
+        @include svgIcon(100%); 
+        width: 16px;
+        height: 16px;
+        display: block;
+        margin-right: 8px;
+        >svg {
+            fill: $grayLight;
+        }
     }
 }

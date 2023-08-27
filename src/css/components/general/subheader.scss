@@ -1,0 +1,26 @@
+.subheader {
+    padding-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 4px solid $grayLight;
+    margin-bottom: 28px;
+    &__title {
+        color: $grayLight;
+        font-family: $HalvarBreit;
+        font-size: $text-sm;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 0.9;
+        text-transform: uppercase;
+    }
+    &__icon {
+        @include svgIcon(100%);
+        width: 16px;
+        height: 16px;
+        display: block;
+        > svg {
+            fill: $grayLight;
+        }
+    }
+}

@@ -52,3 +52,16 @@
         }
     }
 }
+.page--green {
+    .footer {
+        border-top: 4px solid $grayLight;
+        &__copyright  {
+            color: $grayLight;
+        }
+        ul {
+            a {
+                color: $grayLight;
+            }
+        }
+    }
+}

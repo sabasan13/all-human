@@ -2,14 +2,16 @@
     &--gray {
         background: $grayLight;
     }
+    &--green {
+        background: $greenDark;
+    }
     .container {
         @media #{$desktop}  {
             display: grid;
-            grid-template-columns: 255px 1fr;
+            grid-template-columns: 255px calc(100% - 255px);
             margin: 0 auto;
         }
     }
-    
 }
 
 .layout-main {

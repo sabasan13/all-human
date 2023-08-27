@@ -72,3 +72,29 @@
         }
     }
 }
+
+.page--green {
+    .main-menu {
+        border-top: 4px solid $grayLight;
+        background: $greenDark;
+        @media #{$desktop}  {
+            border-top: none;
+            border-bottom: 4px solid $grayLight;
+        }
+        &__logout {
+            &__name {
+                color: $grayLight;;
+            }
+            &__icon {
+                > svg {
+                    fill: $grayLight;
+                }
+            }
+        }
+        &__item {
+            a {
+                color: $grayLight;
+            }
+        }
+    }
+}
